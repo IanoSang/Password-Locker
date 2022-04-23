@@ -1,3 +1,6 @@
+import pyperclip
+
+
 class User:
     """
        Create User class that generates new instances of a user.
@@ -77,12 +80,18 @@ class Credentials:
     @classmethod
     def if_credential_exist(cls, account):
         """
-        Method that checks if a credential exists from the credential list and returns true or false depending if the credential exists.
+        Method that checks if a credential exists from the credential list and returns true or false depending if
+        the credential exists.
         """
         for credential in cls.credentials_list:
             if credential.account == account:
                 return True
         return False
+
+    @classmethod
+    def copy_password(cls, account):
+        found_credentials = Credentials.find_credential(account)
+        pyperclip.copy(found_credentials.password)
 
 
 print("Everything is ok here")
