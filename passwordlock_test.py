@@ -48,6 +48,12 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.username, 'IanSang')
         self.assertEqual(self.new_credential.password, 'Is24446666668888888')
 
+    def save_details(self):
+        """
+        method to store a new credential to the credentials list
+        """
+        Credentials.credentials_list.append(self)
+
 
 if __name__ == "__main__":
     unittest.main()
