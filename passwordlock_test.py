@@ -1,5 +1,6 @@
 import unittest
 from passwordlock import User
+from passwordlock import Credentials
 
 
 class TestClass(unittest.TestCase):
@@ -26,6 +27,12 @@ class TestClass(unittest.TestCase):
         """
         self.new_user.save_user()
         self.assertEqual(len(User.user_list), 1)
+
+
+class TestCredentials(unittest.TestCase):
+    """
+    A test class that defines test cases for credentials class
+    """
 
 
 if __name__ == "__main__":
