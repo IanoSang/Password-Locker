@@ -54,16 +54,25 @@ class Credentials:
         """
         Credentials.credentials_list.remove(self)
 
-@classmethod
-def verify_user(cls, username, password):
-    """
-    method to verify whether the user is in our user_list or not
-    """
-    a_user = ""
-    for user in User.user_list:
-        if user.username == username and user.password == password:
-            a_user == user.username
-    return a_user
+    @classmethod
+    def verify_user(cls, username, password):
+        """
+        method to verify whether the user is in our user_list or not
+        """
+        a_user = ""
+        for user in User.user_list:
+            if user.username == username and user.password == password:
+                a_user == user.username
+        return a_user
+
+    @classmethod
+    def find_credential(cls, account):
+        """
+        Method that takes in a account_name and returns a credential that matches that account_name.
+        """
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
 
 
 print("Everything is ok here")
