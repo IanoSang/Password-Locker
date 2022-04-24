@@ -168,7 +168,7 @@ def main():
                     print('_' * 50)
                 print('*' * 50)
             else:
-                print("You don't have any credentials saved yet..........")
+                print("You don't have any credentials saved yet!!")
         elif short_code == "fc":
             print("Enter the Account Name you want to search for")
             search_name = input().lower()
@@ -189,7 +189,7 @@ def main():
                 print("_" * 50)
                 search_credential.delete_credentials()
                 print('\n')
-                print(f"You  have deleted: {search_credential.account} successfully!!!")
+                print(f"You  have deleted {search_credential.account} credentials successfully!!")
                 print('\n')
             else:
                 print(f"The {search_name} credentials You want to delete does not Exist in this locker!!")
