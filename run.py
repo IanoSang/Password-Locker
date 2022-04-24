@@ -40,3 +40,10 @@ def create_new_credential(account, username, password):
     """
     new_credential = Credentials(account, username, password)
     return new_credential
+
+
+def save_credentials(credentials):
+    """
+    Function to save Credentials to the credentials list
+    """
+    credentials.save_details()
