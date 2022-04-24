@@ -75,3 +75,12 @@ def check_credentials(account):
     Function that check if a Credentials exists with that account name and return true or false
     """
     return Credentials.if_credential_exist(account)
+
+
+def generate_password():
+    """
+    generates a random password for the user.
+    """
+    auto_password = Credentials.generatePassword()
+    return auto_password
+
