@@ -84,3 +84,9 @@ def generate_password():
     auto_password = Credentials.generatePassword()
     return auto_password
 
+
+def copy_password(account):
+    """
+    Function to copy the password using the pyperclip framework.
+    """
+    return Credentials.copy_password(account)
